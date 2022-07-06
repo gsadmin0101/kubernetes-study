@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-primeiro-pod
+spec:
+  containers:
+  - name: nginx-primeiro-pod
+    image: nginx:latest
+
