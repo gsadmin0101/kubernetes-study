@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap 
-namespaces:
-  names: sistema-noticias-configmap
+metadata:
+  name: sistema-noticias-configmap
 data:
   HOST_DB: svc-db-portal-noticias:3306
   USER_DB: root
