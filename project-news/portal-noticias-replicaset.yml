@@ -5,17 +5,20 @@ metadata:
 spec:
   template:
     metadata:
-      name: portal-noticias-replicaset
+      name: portal-noticias
       labels:
-        app: portal-noticias-replicaset
+        app: portal-noticias
     spec:
       containers:
-        - name: portal-noticias-container
+        - name: portal-noticias
           image: aluracursos/portal-noticias:1
           ports:
             - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: portal-noticias-configmap
   replicas: 3
   selector:
     matchLabels:
-      app: portal-noticias-replicaset
+      app: portal-noticias
 
