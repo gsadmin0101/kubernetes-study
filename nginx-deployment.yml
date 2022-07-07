@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx-deployment
-        image: nginx:stable
+        image: nginx:latest
         ports:
           - containerPort: 80
