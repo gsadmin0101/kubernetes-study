@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: sistemas-noticias
   labels:
-    name: sistemas-noticias
+    app: sistemas-noticias
 spec:
   containers:
   - name: sistemas-noticias
