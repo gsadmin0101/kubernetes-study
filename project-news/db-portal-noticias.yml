@@ -9,4 +9,4 @@ spec:
     - name: db-portal-noticias
       image: aluracursos/mysql-db:1
       ports:
-        - port: 3306
+        - containerPort: 3306
