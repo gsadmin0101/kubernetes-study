@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-portal-noticias-deployment
+spec:
+  selector:
+    matchLabels:
+      db: db-portal-noticias-deployment
+  template:
+    metadata:
+      name: db-portal-noticias-deployment
+      labels:
+        db: db-portal-configmap-deployment
+    spec:
+      containers:
+      - name: db-portal-noticias-deployment
+        image: aluracursos/mysql-db:1
+        ports:
+          - containerPort: 3306
+        envFrom:
+          - configMapRef:
+            name: db-portal-configmap
+            
+    
