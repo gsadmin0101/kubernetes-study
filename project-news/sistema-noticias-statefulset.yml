@@ -19,6 +19,19 @@ spec:
         image: aluracursos/sistema-noticias:1
         ports:
           - containerPort: 80
+        volumeMounts:
+          - name: imagens
+            mountPath: /var/www/html/uploads
+          - name: sessao
+            mountPath: /tmp
         envFrom:
           - configMapRef:
               name: sistema-configmap
+      volumes:
+        - name: imagens
+          persistentVolumeClaim:
+            claimName: imagens-pvc
+        - name: sessao
+          persistentVolumeClaim:
+            claimName: sessao-pvc
+        
