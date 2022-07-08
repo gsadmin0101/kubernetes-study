@@ -10,7 +10,7 @@ spec:
       - mountPath: /primeiro-volume
         name: primeiro-volume
   - name: jenkins
-    image: jenkins:alpine
+    image: jenkins:2.60.3-alpine
     volumeMounts:
       - mountPath: /primeiro-volume
         name: primeiro-volume
