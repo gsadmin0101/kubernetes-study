@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-db-portal-noticias
+  name: svc-db-noticias
 spec:
   type: ClusterIP
-  selector:
-    db: db-portal-noticias-deployment
   ports:
     - port: 3306
+  selector:
+    app: db-noticias
