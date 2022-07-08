@@ -17,7 +17,7 @@ spec:
   volumes:
   - name: primeiro-volume
     hostPath:
-      path: /home/gsadmin/Desktop/kubernets-study/
+      path: /primeiro-volume
       type: DirectoryOrCreate
 
   
