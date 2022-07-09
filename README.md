@@ -1,1 +1,1 @@
-# kubernets-study
+# kubernetes-study
