@@ -11,10 +11,11 @@ spec:
       name: web1
       labels:
         app: web1
-    containers:
-    - name: web1
-      image: gcr.io/google-samples/hello-app:1.0
-      ports:
-        containerPort: 8080
+    spec:
+      containers:
+      - name: web1
+        image: gcr.io/google-samples/hello-app:1.0
+        ports:
+          - containerPort: 8080
 
     
